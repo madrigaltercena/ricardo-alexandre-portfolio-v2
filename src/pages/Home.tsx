@@ -78,7 +78,7 @@ export const Home = () => {
           animate={image.animated}
           transition={image.transition}
           className="absolute inset-0 w-full h-full object-cover"
-          src="/profile.webp"
+          src="/profile.jpg"
           alt="Ricardo Alexandre"
         />
       </motion.div>
