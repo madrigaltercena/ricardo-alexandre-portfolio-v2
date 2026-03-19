@@ -9,8 +9,6 @@ export const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
   const navLink: INavLink[] = [
     { name: 'About', path: '/about' },
-    { name: 'Skills', path: '/skills' },
-    { name: 'Experience', path: '/experience' },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Contact', path: '/contact' },
   ];

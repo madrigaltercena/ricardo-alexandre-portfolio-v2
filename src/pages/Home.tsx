@@ -2,9 +2,38 @@ import { motion } from 'framer-motion';
 import { LeaveCard } from '../components/LeaveCard';
 import { HomeMotion } from '../common/motion/Home';
 import { Link } from 'react-router-dom';
+import { SectionMotion } from '../common/motion/Section';
+import { SectionHeader } from '../components/SectionHeader';
+import { SkillCard } from '../components/SkillCard';
+import { CommonCard } from '../components/CommonCard';
+import { IconBolt, IconRobot, IconClockPlay } from '@tabler/icons-react';
 
 export const Home = () => {
   const { description, resume, wrapImg, image } = HomeMotion;
+  const { section } = SectionMotion;
+  
+  // Skills data
+  const skills = [
+    { label: 'Power Automate', icon: <IconBolt /> },
+    { label: 'Copilot Studio', icon: <IconRobot /> },
+    { label: 'Power Apps', icon: <IconRobot /> },
+    { label: 'Openclaw', icon: <IconRobot /> },
+  ];
+  
+  // Experience data
+  const experiences = [
+    {
+      id: 1,
+      image: '/vite.svg',
+      name: 'Power Platform Specialist',
+      position: 'Freelance / Consulting',
+      startDate: '2021',
+      endDate: 'Present',
+      duration: '3+ Years',
+      location: 'Remote',
+    },
+  ];
+
   return (
     <section className="flex flex-col lg:flex-row h-full p-6 items-center min-h-[70vh]">
       <motion.div
@@ -56,6 +85,44 @@ export const Home = () => {
       </motion.div>
 
       <LeaveCard label="Power Platform" />
+      
+      {/* Skills Section */}
+      <motion.section
+        initial={section.initial}
+        animate={section.animated}
+        transition={section.transition}
+        className="w-full space-y-6 mt-12"
+      >
+        <SectionHeader
+          icon={<IconBolt />}
+          label="Skills"
+          description="List of my skills"
+        />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {skills.map((skill) => (
+            <SkillCard key={skill.label} icon={skill.icon} label={skill.label} />
+          ))}
+        </div>
+      </motion.section>
+      
+      {/* Experience Section */}
+      <motion.section
+        initial={section.initial}
+        animate={section.animated}
+        transition={section.transition}
+        className="w-full space-y-6"
+      >
+        <SectionHeader
+          icon={<IconClockPlay />}
+          label="Experience"
+          description="My professional career journey"
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {experiences.map((experience) => (
+            <CommonCard key={experience.id} {...experience} />
+          ))}
+        </div>
+      </motion.section>
     </section>
   );
 };

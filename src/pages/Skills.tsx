@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import {
   IconBolt,
-  IconDatabase,
   IconRobot,
 } from '@tabler/icons-react';
 import { SectionMotion } from '../common/motion/Section';
@@ -14,8 +13,9 @@ export const Skills = () => {
   // Power Platform skills
   const skills = [
     { label: 'Power Automate', icon: <IconBolt /> },
-    { label: 'Dataverse', icon: <IconDatabase /> },
     { label: 'Copilot Studio', icon: <IconRobot /> },
+    { label: 'Power Apps', icon: <IconRobot /> },
+    { label: 'Openclaw', icon: <IconRobot /> },
   ];
   return (
     <motion.section
