@@ -71,16 +71,15 @@ export const Home = () => {
         initial={wrapImg.initial}
         animate={wrapImg.animated}
         transition={wrapImg.transition}
-        className="flex flex-1 items-center justify-center bg-gradient-to-bl from-emerald-500 via-emerald-900 to-black overflow-hidden"
+        className="flex flex-1 items-center justify-center bg-gradient-to-bl from-emerald-500 via-emerald-900 to-black overflow-hidden relative"
       >
         <motion.img
           initial={image.initial}
           animate={image.animated}
           transition={image.transition}
+          className="absolute inset-0 w-full h-full object-cover"
           src="/profile.webp"
           alt="Ricardo Alexandre"
-          width="100%"
-          height="100%"
         />
       </motion.div>
 
