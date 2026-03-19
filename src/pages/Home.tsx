@@ -81,6 +81,7 @@ export const Home = () => {
           alt="Ricardo Alexandre"
           width="100%"
           height="100%"
+          style={{ objectFit: 'cover' }}
         />
       </motion.div>
 
