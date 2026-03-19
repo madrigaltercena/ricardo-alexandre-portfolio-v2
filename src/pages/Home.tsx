@@ -77,9 +77,9 @@ export const Home = () => {
           initial={image.initial}
           animate={image.animated}
           transition={image.transition}
-          className="absolute inset-0 w-full h-full object-cover"
           src="/profile.jpg"
           alt="Ricardo Alexandre"
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
       </motion.div>
 
