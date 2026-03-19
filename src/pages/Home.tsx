@@ -77,10 +77,9 @@ export const Home = () => {
           initial={image.initial}
           animate={image.animated}
           transition={image.transition}
-          className="w-full h-full"
           src="/profile.webp"
           alt="Ricardo Alexandre"
-          style={{ objectFit: 'cover' }}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
       </motion.div>
 
