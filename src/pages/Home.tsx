@@ -79,7 +79,8 @@ export const Home = () => {
           transition={image.transition}
           src="/profile.webp"
           alt="Ricardo Alexandre"
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          width="100%"
+          height="100%"
         />
       </motion.div>
 
